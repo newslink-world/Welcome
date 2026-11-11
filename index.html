@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070a13">
+<title>Welcome | MUKTO Bot</title>
+<style>
+:root{--bg:#070a13;--cyan:#27e8ff;--blue:#557dff;--violet:#9d5cff;--pink:#ff4bd8;--muted:#a9b4ca}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;color:#f7f9ff;background:radial-gradient(circle at 15% 15%,#15224b 0,transparent 35%),radial-gradient(circle at 90% 80%,#35134b 0,transparent 32%),var(--bg);display:flex;align-items:center;justify-content:center;padding:22px;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.18;background-image:linear-gradient(#8da5ff18 1px,transparent 1px),linear-gradient(90deg,#8da5ff18 1px,transparent 1px);background-size:38px 38px;mask-image:linear-gradient(to bottom,black,transparent)}
+.wrap{width:min(100%,760px);position:relative}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:1.5px}
+.logo{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--blue),var(--violet));box-shadow:0 0 28px #27e8ff55;font-size:21px;color:#06101b}
+.status{font-size:12px;color:#9fffd4;border:1px solid #39f6a344;background:#39f6a311;padding:7px 11px;border-radius:99px}
+.card{position:relative;border:1px solid #ffffff20;background:linear-gradient(145deg,#111a2ddd,#0b1020ee);backdrop-filter:blur(18px);border-radius:28px;padding:clamp(25px,6vw,54px);box-shadow:0 25px 90px #0008;overflow:hidden}
+.card:before{content:"";position:absolute;width:260px;height:260px;border-radius:50%;background:#557dff22;filter:blur(55px);right:-100px;top:-120px}
+.hero{text-align:center;position:relative}
+.bot-icon{width:92px;height:92px;border-radius:29px;margin:0 auto 22px;display:grid;place-items:center;font-size:43px;background:linear-gradient(145deg,#1b3451,#241642);border:1px solid #70eaff55;box-shadow:0 0 38px #27e8ff22}
+.eyebrow{color:var(--cyan);font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+h1{font-size:clamp(32px,8vw,54px);line-height:1.12;margin:12px 0;background:linear-gradient(90deg,#fff,var(--cyan),#bca2ff);background-clip:text;-webkit-background-clip:text;color:transparent}
+.sub{max-width:530px;margin:0 auto;color:var(--muted);line-height:1.9;font-size:15px}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:30px 0 26px}
+.btn{min-height:50px;padding:0 23px;border-radius:15px;display:inline-flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;font-weight:800;transition:.2s}
+.primary{color:#06101b;background:linear-gradient(100deg,var(--cyan),#8eabff);box-shadow:0 9px 28px #27e8ff33}
+.secondary{color:#eaf0ff;border:1px solid #ffffff26;background:#ffffff09}
+.btn:hover{transform:translateY(-3px);filter:brightness(1.08)}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.feature{padding:17px 12px;border-radius:17px;background:#ffffff08;border:1px solid #ffffff12;text-align:center}
+.feature .ico{font-size:22px;margin-bottom:8px}
+.feature strong{display:block;font-size:13px}
+.feature small{display:block;color:var(--muted);font-size:11px;margin-top:5px;line-height:1.5}
+.note{margin-top:24px;text-align:center;color:#78859e;font-size:12px;line-height:1.7}
+.footer{text-align:center;color:#65718a;font-size:11px;margin-top:18px}
+@media(max-width:520px){.features{grid-template-columns:1fr}.feature{display:flex;align-items:center;text-align:left;gap:13px;padding:13px 15px}.feature .ico{margin:0}.feature small{margin-top:3px}.top{margin-bottom:15px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top">
+    <div class="brand"><div class="logo">✦</div><span id="brandName">MUKTO BOT</span></div>
+    <div class="status">● ONLINE EXPERIENCE</div>
+  </div>
+  <section class="card">
+    <div class="hero">
+      <div class="bot-icon">🤖</div>
+      <div class="eyebrow">YOUR SMART ASSISTANT</div>
+      <h1 id="headline">স্বাগতম!</h1>
+      <p class="sub" id="description">আপনার ডিজিটাল সহকারী প্রস্তুত। সহজভাবে কথা বলুন, নির্দেশনা দিন এবং বটের সুবিধাগুলো উপভোগ করুন। শুরু করতে নিচের বাটনে চাপ দিন।</p>
+      <div class="actions">
+        <a class="btn primary" id="startBtn" href="https://t.me/YOUR_BOT_USERNAME?start=welcome">✦ বট চালু করুন</a>
+        <a class="btn secondary" href="#features">আরও জানুন ↓</a>
+      </div>
+    </div>
+    <div class="features" id="features">
+      <div class="feature"><div class="ico">⚡</div><div><strong>দ্রুত সেবা</strong><small>সহজ ও দ্রুত ব্যবহার</small></div></div>
+      <div class="feature"><div class="ico">💬</div><div><strong>সহজ যোগাযোগ</strong><small>Telegram থেকেই ব্যবহার</small></div></div>
+      <div class="feature"><div class="ico">🔒</div><div><strong>সহজ অ্যাক্সেস</strong><small>এক ট্যাপেই শুরু করুন</small></div></div>
+    </div>
+    <div class="note">নিচের Start বাটনে চাপ দিলে আপনি Telegram বটে চলে যাবেন।<br>এটি একটি Welcome Landing Page।</div>
+  </section>
+  <div class="footer">© <span id="year"></span> <span id="footerName">MUKTO BOT</span> · Made with care</div>
+</main>
+<script>
+/* শুধু এই অংশে নিজের বটের তথ্য বসান */
+const BOT_NAME = "MUKTO BOT";
+const BOT_USERNAME = "Ntix007_bot"; // @ ছাড়া শুধু username
+const WELCOME_TITLE = "স্বাগতম!";
+const WELCOME_TEXT = "আপনার ডিজিটাল সহকারী প্রস্তুত। সহজভাবে কথা বলুন, নির্দেশনা দিন এবং বটের সুবিধাগুলো উপভোগ করুন। শুরু করতে নিচের বাটনে চাপ দিন।";
+
+document.title = "Welcome | " + BOT_NAME;
+document.getElementById("brandName").textContent = BOT_NAME;
+document.getElementById("footerName").textContent = BOT_NAME;
+document.getElementById("headline").textContent = WELCOME_TITLE;
+document.getElementById("description").textContent = WELCOME_TEXT;
+document.getElementById("year").textContent = new Date().getFullYear();
+if (BOT_USERNAME && BOT_USERNAME !== "YOUR_BOT_USERNAME") {
+  document.getElementById("startBtn").href = "https://t.me/" + encodeURIComponent(BOT_USERNAME) + "?start=welcome";
+} else {
+  document.getElementById("startBtn").addEventListener("click", function(e){
+    e.preventDefault();
+    alert("HTML ফাইলের BOT_USERNAME অংশে আপনার Telegram bot username বসান।");
+  });
+}
+</script>
+</body>
+</html>
